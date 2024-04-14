@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "4280cb04-86dc-4e45-b2f7-be2d649c11c3",
+		"name": "order-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Data Upload",
+			"item": [
+				{
+					"name": "Data File Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MDESOUS6/Desktop/Desafiotecnico-VerticalLogistica/data_1.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/data/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"data",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Data",
+			"item": [
+				{
+					"name": "Buscar por id do pedido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar pedidos por data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders?start=2021-07-16&end=2021-07-16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2021-07-16"
+								},
+								{
+									"key": "end",
+									"value": "2021-07-16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar pedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
