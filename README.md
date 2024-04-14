@@ -6,8 +6,8 @@ Este é um aplicativo de processamento e consulta de pedidos desenvolvido com Ja
 - Java 17
 - Spring Boot 3
 - Banco de Dados Relacional: PostgreSQL
-- Docker para construção da imagem da aplicação
-- Docker Compose para rodar o banco de dados e o aplicativo localmente
+- Docker
+- Docker Compose
 
 ## Instruções de Uso
 ### Pré-requisitos
