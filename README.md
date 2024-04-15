@@ -36,6 +36,10 @@ Este é um aplicativo de processamento e consulta de pedidos desenvolvido com Ja
 
 Agora a aplicação estará rodando localmente na porta 8080 juntamente com o banco de dados PostgreSQL.
 
+## Jacoco Coverage Report
+O relatório de cobertura de testes gerado pelo Jacoco está disponível em:
+- http://localhost:8000/jacoco/
+
 ## Documentação da API
 A documentação da API pode ser acessada através do Swagger, disponível em:
 - http://localhost:8080/swagger-ui/index.html#/
