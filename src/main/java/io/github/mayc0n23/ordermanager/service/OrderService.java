@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static io.github.mayc0n23.ordermanager.utils.ErrorMessage.ORDER_NOT_FOUND_MESSAGE;
+import static io.github.mayc0n23.ordermanager.utils.Pattern.DATE_WITH_HYPHEN;
 
 @Service
 public class OrderService {
@@ -42,9 +43,8 @@ public class OrderService {
     }
 
     private List<Order> getOrdersByDateRange(String start, String end) {
-        final String pattern = "yyyy-MM-dd";
-        final var startDate = DateUtils.parseDateFromPattern(start, pattern);
-        final var endDate = DateUtils.parseDateFromPattern(end, pattern);
+        final var startDate = DateUtils.parseDateFromPattern(start, DATE_WITH_HYPHEN);
+        final var endDate = DateUtils.parseDateFromPattern(end, DATE_WITH_HYPHEN);
         final var orderEntities = orderRepository.findByDateBetween(startDate, endDate);
         return OrderMapper.toDomainList(orderEntities);
     }
